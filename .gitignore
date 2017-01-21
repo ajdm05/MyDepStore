@@ -241,12 +241,6 @@ _Pvt_Extensions
 .paket/paket.exe
 
 # FAKE - F# Make
-.fake/SAR.Site/bin
-SAR.Site/obj
-SAR.DataBase/bin
-SAR.DataBase/obj
-SAR.Initializer/bin
-SAR.Initializer/obj
 *.dll
 *.suo
 *.user
