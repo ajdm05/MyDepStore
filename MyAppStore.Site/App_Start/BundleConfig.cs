@@ -8,6 +8,32 @@ namespace MyAppStore.Site
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // CSS style (bootstrap/inspinia)
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/Inspinia_Theme/Css/animate.css",
+                      "~/Content/Inspinia_Theme/Css/style.css",
+                      "~/Content/bootstrap.css"));
+
+            // Font Awesome icons
+            bundles.Add(new StyleBundle("~/font-awesome/css").Include(
+                      "~/Content/Inspinia_Theme/Fonts/font-awesome/css/font-awesome.min.css", new CssRewriteUrlTransform()));
+
+            // Bootstrap
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/respond.js"));
+
+            // Inspinia script
+            bundles.Add(new ScriptBundle("~/bundles/inspinia").Include(
+                      "~/Scripts/Inspinia_Theme/plugins/metisMenu/metisMenu.min.js",
+                      "~/Scripts/Inspinia_Theme/plugins/pace/pace.min.js",
+                      "~/Scripts/Inspinia_Theme/app/inspinia.js"));
+
+            // Inspinia skin config script
+            bundles.Add(new ScriptBundle("~/bundles/skinConfig").Include(
+                      "~/Scripts/Inspinia_Theme/app/skin.config.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -19,13 +45,9 @@ namespace MyAppStore.Site
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            // SlimScroll
+            bundles.Add(new ScriptBundle("~/plugins/slimScroll").Include(
+                      "~/Scripts/Inspinia_Theme/plugins/slimscroll/jquery.slimscroll.min.js"));
         }
     }
 }
