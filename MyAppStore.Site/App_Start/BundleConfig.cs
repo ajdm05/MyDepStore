@@ -20,7 +20,7 @@ namespace MyAppStore.Site
 
             // jQuery
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/Inspinia_Theme/jquery-2.1.1.min.js"));
+                        "~/Scripts/jquery-2.1.1.min.js"));
 
             // jQueryUI CSS
             bundles.Add(new ScriptBundle("~/Scripts/plugins/jquery-ui/jqueryuiStyles").Include(
