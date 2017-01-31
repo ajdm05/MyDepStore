@@ -18,7 +18,6 @@ namespace MyDepStore.Database.Repository
 
         protected override User MapNewValuesToOld(User oldEntity, User newEntity)
         {
-            oldEntity.Id = newEntity.Id;
             oldEntity.Username = newEntity.Username;
             oldEntity.FirstName = newEntity.FirstName;
             oldEntity.LastName = newEntity.LastName;
