@@ -9,8 +9,14 @@ namespace MyAppStore.Site.Controllers
     {
         public Lazy<BaseRepository<User>> UserRepository { get; set; }
 
+        public UserController(Lazy<BaseRepository<User>> userRepository)
+        {
+            this.UserRepository = userRepository;
+        }
+
         public ActionResult Index()
         {
+            var allUsers = this.UserRepository.Value.All();
             return this.View();
         }
     }
